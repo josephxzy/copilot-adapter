@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.1.16](https://github.com/eowl/copilot-adapter/releases/tag/v0.1.16) 2026-08-22
+
+* Feat: added GLM-5.3-Flash model by @eowl in https://github.com/eowl/copilot-adapter/pull/67
+
 ## [v0.1.15](https://github.com/eowl/copilot-adapter/releases/tag/v0.1.15) 2026-08-22
 
 * Feat: added DeepSeek V4 Flash Vision Exp model by @eowl in https://github.com/eowl/copilot-adapter/pull/65
