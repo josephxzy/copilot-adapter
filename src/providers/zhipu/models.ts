@@ -25,6 +25,9 @@ const BM_GLM53_BASE = {
   provider: ZHIPU,
   thinking: true,
   imageInput: false,
+  version: '5.3',
+  maxInputTokens: 872_000,
+  maxOutputTokens: 128_000,
   maxTools: 128,
   thinkingConfig: ZHIPU_GLM53_THINKING,
 };
@@ -73,10 +76,23 @@ export const ZHIPU_GLM_5_3: ModelItem = {
   maxOutputTokens: 128_000,
   detailKey: 'model.glm-5.3.detail',
   pricing: {
-    USD: { default: { cacheInput: 0.26, input: 1.4, output: 4.4 } },
     CNY: { default: { cacheInput: 2, input: 8, output: 28 } },
+    USD: { default: { cacheInput: 0.26, input: 1.4, output: 4.4 } },
   },
   priceCategory: 'high',
+};
+
+export const ZHIPU_GLM_5_3_FLASH: ModelItem = {
+  ...BM_GLM53_BASE,
+  id: 'glm-5.3-flash',
+  label: 'GLM-5.3-Flash',
+  imageInput: true,
+  detailKey: 'model.glm-5.3-flash.detail',
+  pricing: {
+    CNY: { default: { cacheInput: 0.115, input: 0.4, output: 1.4 } },
+    USD: { default: { cacheInput: 0.015, input: 0.075, output: 0.25 } },
+  },
+  priceCategory: 'low',
 };
 
 export const ZHIPU_GLM_5_2: ModelItem = {
@@ -151,6 +167,7 @@ export const ZHIPU_GLM_5: ModelItem = {
 };
 
 export const ZP_MODELS: readonly ModelItem[] = [
+  ZHIPU_GLM_5_3_FLASH,
   ZHIPU_GLM_5_3,
   ZHIPU_GLM_5_2,
   ZHIPU_GLM_5_1,
