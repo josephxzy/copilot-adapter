@@ -74,6 +74,7 @@ suite('providers/zhipu', () => {
       assert.deepEqual(
         ZP_MODELS.map((m) => m.id),
         [ 
+          'glm-5.3-flash',
           'glm-5.3',
           'glm-5.2',
           'glm-5.1',
@@ -103,6 +104,7 @@ suite('providers/zhipu', () => {
     test('thinking-capable models match the documented set', () => {
       const reasoning = ZP_MODELS.filter((m) => m.thinking).map((m) => m.id);
       assert.deepEqual(reasoning, [
+        'glm-5.3-flash',
         'glm-5.3',
         'glm-5.2',
         'glm-5.1',

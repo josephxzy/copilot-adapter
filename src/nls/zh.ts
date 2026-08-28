@@ -53,6 +53,7 @@ export const zh: Translation = {
   'model.qwen3.7-plus-us.detail': '均衡型模型——仅在 US 区域端点可用',
   'model.qwen3.7-max-us.detail': '规模最大、综合能力最强的模型——仅在 US 区域端点可用',
 
+  'model.glm-5.3-flash.detail': 'GLM-5.3-Flash 是 GLM-5 系列首个原生多模态模型',
   'model.glm-5.3.detail': 'GLM-5.3 是智谱最新旗舰模型，复杂软件工程与 Agent 任务能力全面进阶。',
   'model.glm-5.2.detail': 'GLM-5.2 是面向长任务时代的旗舰模型',
   'model.glm-5.1.detail': '高智能基座——Coding 能力对齐 Claude',
