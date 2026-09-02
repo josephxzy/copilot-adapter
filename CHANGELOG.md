@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.1.17](https://github.com/eowl/copilot-adapter/releases/tag/v0.1.17) 2026-09-02
+
+* refactor: change request timeout to 180s by @eowl in [#69](https://github.com/eowl/copilot-adapter/pull/69)
+
 ## [v0.1.16](https://github.com/eowl/copilot-adapter/releases/tag/v0.1.16) 2026-08-22
 
 * Feat: added GLM-5.3-Flash model by @eowl in https://github.com/eowl/copilot-adapter/pull/67
@@ -47,9 +51,6 @@
 * Refactor service links by @eowl in https://github.com/eowl/copilot-adapter/pull/43
 * Balance check & info by @eowl in https://github.com/eowl/copilot-adapter/pull/44
 * Add pricing information for models and endpoints by @eowl in https://github.com/eowl/copilot-adapter/pull/45
-
-## Balance & Cost Info
-<img width="952" height="559" alt="1655551" src="https://github.com/user-attachments/assets/febfc08a-824e-41b5-9dd3-34b3a7621b58" />
 
 **Full Changelog**: https://github.com/eowl/copilot-adapter/compare/v0.1.8...v0.1.9
 
