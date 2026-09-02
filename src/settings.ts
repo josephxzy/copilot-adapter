@@ -54,7 +54,7 @@ export class Settings {
   }
 
   static requestTimeout(): number {
-    return this.section().get<number>('requestTimeout', 60);
+    return this.section().get<number>('requestTimeout', 180);
   }
 
   static requestRetries(): number {

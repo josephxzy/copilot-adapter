@@ -161,7 +161,7 @@ The extension uses VS Code's unit-price API. Some models are configured with pri
 | `copilot-adapter.maxTokens` | `0` | Max output tokens per request; `0` uses the model's built-in default |
 | `copilot-adapter.visionProxyModel` | `"off"` | Model to use as vision proxy, or `"off"` to disable — see [Vision Proxy](#vision-proxy) |
 | `copilot-adapter.visionProxyPrompt` | *(system prompt)* | Custom system prompt for the vision proxy model |
-| `copilot-adapter.requestTimeout` | `60` | HTTP request timeout in seconds; `0` = no timeout |
+| `copilot-adapter.requestTimeout` | `180` | HTTP request timeout in seconds; `0` = no timeout |
 | `copilot-adapter.requestRetries` | `2` | Auto-retry count on rate-limit (429) or server errors (503), max 5 |
 | `copilot-adapter.imageTokenEstimate` | `1020` | Estimated tokens per image for context-window tracking |
 | `copilot-adapter.tokenRatio` | `4.0` | Default chars-per-token ratio for token estimation |
@@ -173,6 +173,10 @@ The extension uses VS Code's unit-price API. Some models are configured with pri
 | `copilot-adapter.pricingCurrency` | `""` | Fallback currency for credits unit on model hover cards. Priority: balance API > endpoint > this setting > VS Code language (zh → CNY, else USD) |
 | `copilot-adapter.maxWarmupRounds` | `3` | Max warmup rounds per request (requires `toolWarmup` on) |
 | `copilot-adapter.debugMode` | `"off"` | Log verbosity: `off` / `info` / `meta` / `verbose` |
+
+### Request Timeout
+
+Some models' thinking modes can produce very large outputs (for example, lengthy reasoning chains before the final answer). If you see timeout errors in the output channel, try increasing `copilot-adapter.requestTimeout` to give these requests more time to complete.
 
 ### Debug Mode Levels
 

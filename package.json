@@ -543,7 +543,7 @@
         "copilot-adapter.requestTimeout": {
           "order": 2,
           "type": "number",
-          "default": 60,
+          "default": 180,
           "minimum": 0,
           "description": "%copilot-adapter.config.requestTimeout.description%"
         },

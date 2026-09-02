@@ -161,7 +161,7 @@ VS Code Copilot Chat 官方的 **Custom Endpoint** 仅支持基础的模型配�
 | `copilot-adapter.maxTokens` | `0` | 每次请求最大输出 Token 数；`0` 使用模型内置默认值 |
 | `copilot-adapter.visionProxyModel` | `"off"` | 视觉代理模型 ID，`"off"` 禁用，详见[视觉代理](#视觉代理) |
 | `copilot-adapter.visionProxyPrompt` | *(系统提示词)* | 视觉代理使用的自定义系统提示词 |
-| `copilot-adapter.requestTimeout` | `60` | HTTP 请求超时时间（秒）；`0` = 无超时 |
+| `copilot-adapter.requestTimeout` | `180` | HTTP 请求超时时间（秒）；`0` = 无超时 |
 | `copilot-adapter.requestRetries` | `2` | 速率限制(429)或服务端错误(503)时的自动重试次数，最多 5 次 |
 | `copilot-adapter.imageTokenEstimate` | `1020` | 上下文窗口追踪中每张图片的估算 token 消耗 |
 | `copilot-adapter.tokenRatio` | `4.0` | 默认字符/token 比率，用于 token 估算 |
@@ -173,6 +173,10 @@ VS Code Copilot Chat 官方的 **Custom Endpoint** 仅支持基础的模型配�
 | `copilot-adapter.pricingCurrency` | `""` | 模型悬浮卡片上额度单位的备选币种。优先级：余额 API 响应 > 端点配置 > 此设置 > VS Code 界面语言（中文为 CNY，其他为 USD） |
 | `copilot-adapter.maxWarmupRounds` | `3` | 每次请求最大预热轮数（需启用 `toolWarmup`） |
 | `copilot-adapter.debugMode` | `"off"` | 日志级别：`off` / `info` / `meta` / `verbose` |
+
+### 请求超时
+
+部分模型的思考模式可能会输出大量文本（例如，最终答案前的长推理链），从而触发超时。如果在输出频道看到 timeout 错误，可适当增大 `copilot-adapter.requestTimeout` 的阈值，为这些请求留出更多完成时间。
 
 ### 日志级别说明
 
